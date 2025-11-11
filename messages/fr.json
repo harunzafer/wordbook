@@ -1,0 +1,19 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"site_title": "Wordbook - Dictionnaire en ligne pour apprenants d'anglais",
+	"site_description": "Une plateforme de dictionnaire en ligne pour les apprenants d'anglais avec support multilingue. Obtenez des définitions claires et des traductions dans 8 langues.",
+	"home_welcome": "Bienvenue sur Wordbook",
+	"home_description": "Une plateforme de dictionnaire en ligne pour les apprenants d'anglais avec support multilingue. Recherchez des mots, obtenez des définitions claires et trouvez des traductions dans 8 langues.",
+	"search_placeholder": "Rechercher un mot...",
+	"translate_button": "Traduire",
+	"tooltip_select_language": "Sélectionnez votre langue ici",
+	"feature_definitions_title": "Définitions simplifiées",
+	"feature_definitions_description": "Descriptions de mots claires et concises conçues pour les apprenants.",
+	"feature_examples_title": "Phrases d'exemple",
+	"feature_examples_description": "Exemples d'utilisation pratiques pour vous aider à comprendre le contexte.",
+	"feature_languages_title": "8 langues",
+	"feature_languages_description": "Traductions en anglais, français, allemand, italien, polonais, portugais, espagnol et turc.",
+	"nav_home": "Accueil",
+	"nav_about": "À propos",
+	"nav_contact": "Contact"
+}

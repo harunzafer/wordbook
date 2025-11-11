@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+@import 'flag-icons/css/flag-icons.min.css';
+@plugin '@tailwindcss/typography';
+@plugin "daisyui" {
+	themes: light --default, dark --prefersdark;
+}

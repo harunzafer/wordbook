@@ -1,0 +1,19 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"site_title": "Wordbook - İngilizce Öğrenenler için Çevrimiçi Sözlük",
+	"site_description": "İngilizce öğrenenler için çok dilli destekli bir çevrimiçi sözlük platformu. Net tanımlar ve 8 dilde çeviriler edinin.",
+	"home_welcome": "Wordbook'a Hoş Geldiniz",
+	"home_description": "İngilizce öğrenenler için çok dilli destekli bir çevrimiçi sözlük platformu. Kelime arayın, net tanımlar edinin ve 8 dilde çeviriler bulun.",
+	"search_placeholder": "Bir kelime arayın...",
+	"translate_button": "Çevir",
+	"tooltip_select_language": "Dilinizi buradan seçin",
+	"feature_definitions_title": "Basitleştirilmiş Tanımlar",
+	"feature_definitions_description": "Öğrenenler için tasarlanmış net ve özlü kelime açıklamaları.",
+	"feature_examples_title": "Örnek Cümleler",
+	"feature_examples_description": "Bağlamı anlamanıza yardımcı olacak pratik kullanım örnekleri.",
+	"feature_languages_title": "8 Dil",
+	"feature_languages_description": "İngilizce, Fransızca, Almanca, İtalyanca, Lehçe, Portekizce, İspanyolca ve Türkçe çeviriler.",
+	"nav_home": "Ana Sayfa",
+	"nav_about": "Hakkında",
+	"nav_contact": "İletişim"
+}

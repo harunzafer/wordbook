@@ -1,0 +1,19 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"site_title": "Wordbook - Online Dictionary for English Learners",
+	"site_description": "An online dictionary platform for English learners with multilingual support. Get clear definitions and translations in 8 languages.",
+	"home_welcome": "Welcome to Wordbook",
+	"home_description": "An online dictionary platform for English learners with multilingual support. Search words, get clear definitions, and find translations in 8 languages.",
+	"search_placeholder": "Search for a word...",
+	"translate_button": "Translate",
+	"tooltip_select_language": "Select your language here",
+	"feature_definitions_title": "Simplified Definitions",
+	"feature_definitions_description": "Clear and concise word descriptions designed for learners.",
+	"feature_examples_title": "Example Sentences",
+	"feature_examples_description": "Practical usage examples to help you understand context.",
+	"feature_languages_title": "8 Languages",
+	"feature_languages_description": "Translations in English, French, German, Italian, Polish, Portuguese, Spanish, and Turkish.",
+	"nav_home": "Home",
+	"nav_about": "About",
+	"nav_contact": "Contact"
+}

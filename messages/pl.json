@@ -1,0 +1,19 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"site_title": "Wordbook - Słownik online dla uczących się angielskiego",
+	"site_description": "Platforma słownika online dla uczących się angielskiego z obsługą wielu języków. Uzyskaj jasne definicje i tłumaczenia w 8 językach.",
+	"home_welcome": "Witamy w Wordbook",
+	"home_description": "Platforma słownika online dla uczących się angielskiego z obsługą wielu języków. Wyszukuj słowa, uzyskuj jasne definicje i znajdź tłumaczenia w 8 językach.",
+	"search_placeholder": "Wyszukaj słowo...",
+	"translate_button": "Tłumacz",
+	"tooltip_select_language": "Wybierz swój język tutaj",
+	"feature_definitions_title": "Uproszczone definicje",
+	"feature_definitions_description": "Jasne i zwięzłe opisy słów zaprojektowane dla uczących się.",
+	"feature_examples_title": "Przykładowe zdania",
+	"feature_examples_description": "Praktyczne przykłady użycia, które pomogą zrozumieć kontekst.",
+	"feature_languages_title": "8 języków",
+	"feature_languages_description": "Tłumaczenia w języku angielskim, francuskim, niemieckim, włoskim, polskim, portugalskim, hiszpańskim i tureckim.",
+	"nav_home": "Strona główna",
+	"nav_about": "O nas",
+	"nav_contact": "Kontakt"
+}

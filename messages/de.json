@@ -1,0 +1,19 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"site_title": "Wordbook - Online-Wörterbuch für Englischlernende",
+	"site_description": "Eine Online-Wörterbuchplattform für Englischlernende mit mehrsprachiger Unterstützung. Erhalten Sie klare Definitionen und Übersetzungen in 8 Sprachen.",
+	"home_welcome": "Willkommen bei Wordbook",
+	"home_description": "Eine Online-Wörterbuchplattform für Englischlernende mit mehrsprachiger Unterstützung. Suchen Sie nach Wörtern, erhalten Sie klare Definitionen und finden Sie Übersetzungen in 8 Sprachen.",
+	"search_placeholder": "Nach einem Wort suchen...",
+	"translate_button": "Übersetzen",
+	"tooltip_select_language": "Wählen Sie hier Ihre Sprache",
+	"feature_definitions_title": "Vereinfachte Definitionen",
+	"feature_definitions_description": "Klare und prägnante Wortbeschreibungen für Lernende.",
+	"feature_examples_title": "Beispielsätze",
+	"feature_examples_description": "Praktische Verwendungsbeispiele, um den Kontext zu verstehen.",
+	"feature_languages_title": "8 Sprachen",
+	"feature_languages_description": "Übersetzungen in Englisch, Französisch, Deutsch, Italienisch, Polnisch, Portugiesisch, Spanisch und Türkisch.",
+	"nav_home": "Startseite",
+	"nav_about": "Über uns",
+	"nav_contact": "Kontakt"
+}

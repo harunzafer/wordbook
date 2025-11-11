@@ -1,0 +1,19 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"site_title": "Wordbook - Dicionário online para estudantes de inglês",
+	"site_description": "Uma plataforma de dicionário online para estudantes de inglês com suporte multilíngue. Obtenha definições claras e traduções em 8 idiomas.",
+	"home_welcome": "Bem-vindo ao Wordbook",
+	"home_description": "Uma plataforma de dicionário online para estudantes de inglês com suporte multilíngue. Pesquise palavras, obtenha definições claras e encontre traduções em 8 idiomas.",
+	"search_placeholder": "Pesquisar uma palavra...",
+	"translate_button": "Traduzir",
+	"tooltip_select_language": "Selecione seu idioma aqui",
+	"feature_definitions_title": "Definições simplificadas",
+	"feature_definitions_description": "Descrições de palavras claras e concisas projetadas para estudantes.",
+	"feature_examples_title": "Frases de exemplo",
+	"feature_examples_description": "Exemplos de uso prático para ajudá-lo a entender o contexto.",
+	"feature_languages_title": "8 idiomas",
+	"feature_languages_description": "Traduções em inglês, francês, alemão, italiano, polonês, português, espanhol e turco.",
+	"nav_home": "Início",
+	"nav_about": "Sobre",
+	"nav_contact": "Contato"
+}

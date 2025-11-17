@@ -8,9 +8,17 @@
 		toLang?: string;
 		onsubmit?: (word: string, lang: string) => void;
 		languageSelector?: any;
+		disabled?: boolean;
 	}
 
-	let { placeholder = 'Search...', fromLang = 'en', toLang = 'fr', onsubmit, languageSelector }: Props = $props();
+	let {
+		placeholder = 'Search...',
+		fromLang = 'en',
+		toLang = 'fr',
+		onsubmit,
+		languageSelector,
+		disabled = false
+	}: Props = $props();
 
 	let inputValue = $state('');
 	let inputElement: HTMLInputElement;
@@ -135,8 +143,10 @@
 
 <div class="relative w-full">
 	<form class="relative" onsubmit={handleSubmit} autocomplete="off">
-		<div class="flex gap-0 w-full">
-			<label class="input input-bordered flex items-center gap-0.5 flex-1 rounded-r-none focus-within:outline-none focus-within:border-primary pr-1">
+		<div class="flex w-full gap-0">
+			<label
+				class="input-bordered input flex flex-1 items-center gap-0.5 rounded-r-none pr-1 focus-within:border-primary focus-within:outline-none"
+			>
 				<input
 					bind:this={inputElement}
 					bind:value={inputValue}
@@ -158,17 +168,20 @@
 				{/if}
 
 				<!-- Show keyboard for fromLang if it's not English, otherwise show for toLang -->
-				<Keyboard lang={(fromLang !== 'en' ? fromLang : toLang) as Language} oncharacterclick={handleCharacterClick} />
+				<Keyboard
+					lang={(fromLang !== 'en' ? fromLang : toLang) as Language}
+					oncharacterclick={handleCharacterClick}
+				/>
 			</label>
 
-			<button type="submit" class="btn btn-primary rounded-l-none">
-				Translate
-			</button>
+			<button type="submit" class="btn rounded-l-none btn-primary" {disabled}> Translate </button>
 		</div>
 	</form>
 
 	{#if suggestions.length > 0}
-		<ul class="absolute top-full mt-2 dropdown-content menu bg-base-100 rounded-box z-50 w-full p-2 shadow max-h-90 overflow-y-auto flex-col">
+		<ul
+			class="dropdown-content menu absolute top-full z-50 mt-2 max-h-90 w-full flex-col overflow-y-auto rounded-box bg-base-100 p-2 shadow"
+		>
 			{#each suggestions.slice(0, MAX_SUGGESTIONS) as suggestion, i}
 				<li>
 					<a
@@ -180,12 +193,15 @@
 						}}
 						onmouseenter={() => (highlightIndex = i)}
 					>
-						<span class="inline-flex items-center gap-2 w-full">
-							<span class="font-semibold flex-1">
-								<span>{suggestion.word.slice(0, inputValue.length)}</span>
-								<span class="font-normal opacity-60">{suggestion.word.slice(inputValue.length)}</span>
+						<span class="inline-flex w-full items-center gap-2">
+							<span class="flex-1 font-semibold">
+								{suggestion.word.slice(0, inputValue.length)}<span class="font-normal opacity-60"
+									>{suggestion.word.slice(inputValue.length)}</span
+								>
 							</span>
-							<span class="badge badge-sm badge-outline opacity-60">{suggestion.lang.toUpperCase()}</span>
+							<span class="badge badge-outline badge-sm opacity-60"
+								>{suggestion.lang.toUpperCase()}</span
+							>
 						</span>
 					</a>
 				</li>

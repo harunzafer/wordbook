@@ -29,6 +29,11 @@
 
 	const layouts: KeyboardLayout[] = [
 		{
+			id: 0,
+			code: 'xx' as Language, // Placeholder for "no language selected"
+			keys: [] // No special characters
+		},
+		{
 			id: 1,
 			code: 'de',
 			keys: ['ä', 'ö', 'ü', 'ß']

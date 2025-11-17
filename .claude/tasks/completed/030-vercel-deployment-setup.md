@@ -1,6 +1,6 @@
 # Setup Vercel Deployment
 
-**Status:** Not Started
+**Status:** Completed
 
 ## Overview
 Configure project for Vercel deployment and deploy to production.
@@ -12,11 +12,11 @@ Configure project for Vercel deployment and deploy to production.
 - Deploy to production
 
 ## Acceptance Criteria
-- [ ] Vercel project created and connected
-- [ ] Environment variables configured in Vercel
-- [ ] Build settings correct (SvelteKit adapter-auto)
-- [ ] Successfully deployed to production
-- [ ] Custom domain configured (wordbook.ca)
+- [x] Vercel project created and connected
+- [x] Environment variables configured in Vercel
+- [x] Build settings correct (SvelteKit adapter-auto)
+- [x] Successfully deployed to production
+- [x] Custom domain configured (wordbook.ca)
 
 ## Technical Notes
 - Use @sveltejs/adapter-auto (already in package.json)

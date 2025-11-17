@@ -1,15 +1,15 @@
 import type { PageLoad } from './$types';
 import { error } from '@sveltejs/kit';
 import type { Language } from '$lib/types/language';
-import { SUPPORTED_LANGUAGES } from '$lib/types/language';
+import { ALL_LANGUAGES } from '$lib/types/language';
 
 export const load: PageLoad = async ({ params, fetch }) => {
 	const { fromLang, toLang, word } = params;
 
 	// Validate both languages are supported
 	if (
-		!SUPPORTED_LANGUAGES.includes(fromLang as Language) ||
-		!SUPPORTED_LANGUAGES.includes(toLang as Language)
+		!ALL_LANGUAGES.includes(fromLang as Language) ||
+		!ALL_LANGUAGES.includes(toLang as Language)
 	) {
 		throw error(400, `Unsupported language pair: ${fromLang}-${toLang}`);
 	}

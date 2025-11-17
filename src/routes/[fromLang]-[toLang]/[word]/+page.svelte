@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
-	import AutoComplete from '$lib/components/AutoComplete.svelte';
+	import SearchBox from '$lib/components/SearchBox.svelte';
 	import { LANGUAGE_NAMES } from '$lib/types/language';
 	import type { PageData } from './$types';
 
@@ -8,15 +7,6 @@
 
 	const fromLangName = $derived(LANGUAGE_NAMES[data.fromLang]);
 	const toLangName = $derived(LANGUAGE_NAMES[data.toLang]);
-
-	function handleWordSearch(word: string, lang: string) {
-		if (word && word.trim()) {
-			// Determine the other language (not the suggestion's language)
-			const otherLang = lang === data.fromLang ? data.toLang : data.fromLang;
-			// Navigate to: fromLang-toLang/word
-			goto(`/${lang}-${otherLang}/${word.toLowerCase()}`);
-		}
-	}
 
 	function isEmpty(obj: any): boolean {
 		return !obj || (Array.isArray(obj.translations) && obj.translations.length === 0);
@@ -32,11 +22,9 @@
 	<!-- Search Section -->
 	<div class="mb-8">
 		<h1 class="text-3xl font-bold mb-4">Word Lookup</h1>
-		<AutoComplete
+		<SearchBox
 			placeholder="Search for a word..."
 			fromLang={data.fromLang}
-			toLang={data.toLang}
-			onsubmit={handleWordSearch}
 		/>
 	</div>
 

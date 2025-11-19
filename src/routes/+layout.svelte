@@ -1,6 +1,5 @@
 <script lang="ts">
 	import '../app.css';
-	import favicon from '$lib/assets/favicon.svg';
 	import Header from '$lib/components/Header.svelte';
 	import { preferences } from '$lib/stores/preferences.svelte';
 	import { browser } from '$app/environment';
@@ -16,7 +15,6 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
 	<title>Wordbook - Online Dictionary</title>
 </svelte:head>
 

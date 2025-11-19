@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { BookMarked } from 'lucide-svelte';
 	import ThemeToggle from './ThemeToggle.svelte';
 	import UILanguageSelector from './UILanguageSelector.svelte';
 	import * as m from '$lib/paraglide/messages.js';
@@ -32,7 +33,10 @@
 				<li><a href="/contact">{m.nav_contact()}</a></li>
 			</ul>
 		</div>
-		<a href="/" class="btn btn-ghost text-xl">Wordbook</a>
+		<a href="/" class="btn btn-ghost text-xl">
+			<BookMarked size={24} />
+			Wordbook
+		</a>
 	</div>
 	<div class="navbar-center hidden lg:flex">
 		<ul class="menu menu-horizontal px-1">

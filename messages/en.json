@@ -15,5 +15,14 @@
 	"feature_languages_description": "Translations in English, French, German, Italian, Polish, Portuguese, Spanish, and Turkish.",
 	"nav_home": "Home",
 	"nav_about": "About",
-	"nav_contact": "Contact"
+	"nav_contact": "Contact",
+	"word_lookup_title": "Word Lookup",
+	"error_go_back": "Go Back",
+	"error_go_home": "Go Home",
+	"footer_privacy": "Privacy Policy",
+	"footer_terms": "Terms of Service",
+	"aria_toggle_theme": "Toggle theme",
+	"aria_change_language": "Change website language",
+	"aria_special_keyboard": "Special characters keyboard",
+	"aria_close_tooltip": "Close tooltip"
 }

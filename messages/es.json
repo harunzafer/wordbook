@@ -15,5 +15,14 @@
 	"feature_languages_description": "Traducciones en inglés, francés, alemán, italiano, polaco, portugués, español y turco.",
 	"nav_home": "Inicio",
 	"nav_about": "Acerca de",
-	"nav_contact": "Contacto"
+	"nav_contact": "Contacto",
+	"word_lookup_title": "Búsqueda de palabras",
+	"error_go_back": "Volver",
+	"error_go_home": "Inicio",
+	"footer_privacy": "Política de privacidad",
+	"footer_terms": "Términos de servicio",
+	"aria_toggle_theme": "Cambiar tema",
+	"aria_change_language": "Cambiar idioma del sitio",
+	"aria_special_keyboard": "Teclado de caracteres especiales",
+	"aria_close_tooltip": "Cerrar tooltip"
 }

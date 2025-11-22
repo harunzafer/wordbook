@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
+	import * as m from '$lib/paraglide/messages.js';
 
 	function goBack() {
 		window.history.back();
@@ -37,7 +38,7 @@
 	</div>
 
 	<div class="flex gap-4 justify-center">
-		<button class="btn btn-primary" onclick={goBack}>Go Back</button>
-		<button class="btn btn-outline" onclick={goHome}>Go Home</button>
+		<button class="btn btn-primary" onclick={goBack}>{m.error_go_back()}</button>
+		<button class="btn btn-outline" onclick={goHome}>{m.error_go_home()}</button>
 	</div>
 </div>

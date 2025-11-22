@@ -2,6 +2,7 @@
 	import { preferences } from '$lib/stores/preferences.svelte';
 	import SunIcon from 'lucide-svelte/icons/sun';
 	import MoonIcon from 'lucide-svelte/icons/moon';
+	import * as m from '$lib/paraglide/messages.js';
 
 	function toggleTheme() {
 		preferences.theme = preferences.theme === 'light' ? 'dark' : 'light';
@@ -12,7 +13,7 @@
 	type="button"
 	class="btn btn-ghost btn-circle"
 	onclick={toggleTheme}
-	aria-label="Toggle theme"
+	aria-label={m.aria_toggle_theme()}
 >
 	{#if preferences.theme === 'light'}
 		<MoonIcon size={20} />

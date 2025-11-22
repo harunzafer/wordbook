@@ -15,5 +15,14 @@
 	"feature_languages_description": "Übersetzungen in Englisch, Französisch, Deutsch, Italienisch, Polnisch, Portugiesisch, Spanisch und Türkisch.",
 	"nav_home": "Startseite",
 	"nav_about": "Über uns",
-	"nav_contact": "Kontakt"
+	"nav_contact": "Kontakt",
+	"word_lookup_title": "Wortsuche",
+	"error_go_back": "Zurück",
+	"error_go_home": "Startseite",
+	"footer_privacy": "Datenschutzrichtlinie",
+	"footer_terms": "Nutzungsbedingungen",
+	"aria_toggle_theme": "Thema wechseln",
+	"aria_change_language": "Website-Sprache ändern",
+	"aria_special_keyboard": "Sonderzeichen-Tastatur",
+	"aria_close_tooltip": "Tooltip schließen"
 }

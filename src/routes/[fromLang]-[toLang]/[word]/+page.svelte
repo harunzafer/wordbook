@@ -2,6 +2,7 @@
 	import SearchBox from '$lib/components/SearchBox.svelte';
 	import { LANGUAGE_NAMES } from '$lib/types/language';
 	import type { PageData } from './$types';
+	import * as m from '$lib/paraglide/messages.js';
 
 	let { data }: { data: PageData } = $props();
 
@@ -21,9 +22,9 @@
 <div class="container mx-auto px-4 py-8 max-w-4xl">
 	<!-- Search Section -->
 	<div class="mb-8">
-		<h1 class="text-3xl font-bold mb-4">Word Lookup</h1>
+		<h1 class="text-3xl font-bold mb-4">{m.word_lookup_title()}</h1>
 		<SearchBox
-			placeholder="Search for a word..."
+			placeholder={m.search_placeholder()}
 			fromLang={data.fromLang}
 		/>
 	</div>

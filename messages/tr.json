@@ -15,5 +15,14 @@
 	"feature_languages_description": "İngilizce, Fransızca, Almanca, İtalyanca, Lehçe, Portekizce, İspanyolca ve Türkçe çeviriler.",
 	"nav_home": "Ana Sayfa",
 	"nav_about": "Hakkında",
-	"nav_contact": "İletişim"
+	"nav_contact": "İletişim",
+	"word_lookup_title": "Kelime Arama",
+	"error_go_back": "Geri Dön",
+	"error_go_home": "Ana Sayfa",
+	"footer_privacy": "Gizlilik Politikası",
+	"footer_terms": "Kullanım Koşulları",
+	"aria_toggle_theme": "Temayı değiştir",
+	"aria_change_language": "Site dilini değiştir",
+	"aria_special_keyboard": "Özel karakterler klavyesi",
+	"aria_close_tooltip": "İpucunu kapat"
 }

@@ -15,7 +15,7 @@ Add proper meta tags for SEO and social sharing.
 - [ ] Each page has unique title and description
 - [ ] Open Graph tags for social sharing
 - [ ] Language meta tags (hreflang)
-- [ ] Favicon configured
+- [x] Favicon configured (book-marked icon with light/dark theme support)
 
 ## Technical Notes
 - Use SvelteKit's `<svelte:head>` blocks

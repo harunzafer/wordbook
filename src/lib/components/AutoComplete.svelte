@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Keyboard from './Keyboard.svelte';
 	import type { Language } from '$lib/types/language';
+	import * as m from '$lib/paraglide/messages.js';
 
 	interface Props {
 		placeholder?: string;
@@ -174,7 +175,7 @@
 				/>
 			</label>
 
-			<button type="submit" class="btn rounded-l-none btn-primary" {disabled}> Translate </button>
+			<button type="submit" class="btn rounded-l-none btn-primary" {disabled}>{m.translate_button()}</button>
 		</div>
 	</form>
 

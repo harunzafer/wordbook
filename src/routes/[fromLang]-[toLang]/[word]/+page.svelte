@@ -1,17 +1,10 @@
 <script lang="ts">
 	import SearchBox from '$lib/components/SearchBox.svelte';
-	import { LANGUAGE_NAMES } from '$lib/types/language';
+	import TranslationTable from '$lib/components/TranslationTable.svelte';
 	import type { PageData } from './$types';
 	import * as m from '$lib/paraglide/messages.js';
 
 	let { data }: { data: PageData } = $props();
-
-	const fromLangName = $derived(LANGUAGE_NAMES[data.fromLang]);
-	const toLangName = $derived(LANGUAGE_NAMES[data.toLang]);
-
-	function isEmpty(obj: any): boolean {
-		return !obj || (Array.isArray(obj.translations) && obj.translations.length === 0);
-	}
 </script>
 
 <svelte:head>
@@ -23,50 +16,15 @@
 	<!-- Search Section -->
 	<div class="mb-8">
 		<h1 class="text-3xl font-bold mb-4">{m.word_lookup_title()}</h1>
-		<SearchBox
-			placeholder={m.search_placeholder()}
-			fromLang={data.fromLang}
-		/>
+		<SearchBox placeholder={m.search_placeholder()} />
 	</div>
 
 	<!-- Translation Results -->
 	<div class="mt-8">
-		{#if !isEmpty(data.translations)}
-			<div class="mb-8">
-				<h2 class="text-2xl font-bold mb-4">{fromLangName} → {toLangName}</h2>
-
-				<div class="overflow-x-auto">
-					<table class="table">
-						<thead>
-							<tr>
-								<th class="text-left">{fromLangName}</th>
-								<th class="text-right">{toLangName}</th>
-							</tr>
-						</thead>
-						<tbody>
-							{#each data.translations?.translations ?? [] as translation, i (i)}
-								<tr class="border-t">
-									<td class="text-left px-3">
-										{data.translations?.word}
-										<span class="badge badge-sm badge-outline ml-2">{translation.type}</span>
-									</td>
-									<td class="text-right px-3">{translation.translation}</td>
-								</tr>
-								<tr>
-									<td colspan="2" class="px-3">
-										<p class="mb-1 text-sm">{translation.description}</p>
-										<p class="italic text-sm opacity-70">{translation.example}</p>
-									</td>
-								</tr>
-							{/each}
-						</tbody>
-					</table>
-				</div>
-			</div>
-		{:else}
-			<div class="alert alert-info">
-				<span>No translations found.</span>
-			</div>
-		{/if}
+		<TranslationTable
+			translations={data.translations}
+			fromLang={data.fromLang}
+			toLang={data.toLang}
+		/>
 	</div>
 </div>

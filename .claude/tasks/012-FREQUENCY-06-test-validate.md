@@ -1,8 +1,7 @@
 # Test and Validate Frequency Implementation
 
 **Status:** Not Started
-**Estimated Time:** 30 minutes
-**Parent Task:** 035-add-word-frequency-data
+**Story:** 012-FREQUENCY
 
 ## Overview
 Thoroughly test the frequency-based suggestion sorting and validate improvements.

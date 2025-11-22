@@ -1,6 +1,7 @@
 # Add SEO Metadata and Open Graph Tags
 
 **Status:** Not Started
+**Story:** 001-SEO
 
 ## Overview
 Add proper meta tags for SEO and social sharing.

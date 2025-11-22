@@ -20,7 +20,7 @@ function isValidRequest(data: unknown): data is SuggestRequest {
 	}
 
 	const req = data as Record<string, unknown>;
-	const requiredParams: (keyof SuggestRequest)[] = ['prefix', 'from_lang', 'to_lang'];
+	const requiredParams: (keyof SuggestRequest)[] = ['prefix', 'lang'];
 
 	for (const param of requiredParams) {
 		if (!isValidString(req[param])) {
@@ -51,6 +51,7 @@ function transformSuggestion(item: Record<string, unknown>): Suggestion {
 
 /**
  * Query suggestions from a specific index
+ * Returns suggestions in both English and user's selected language
  * Ports logic from Python words.py:get_suggestions_from_index
  */
 async function getSuggestionsFromIndex(
@@ -58,8 +59,7 @@ async function getSuggestionsFromIndex(
 	partitionKey: string,
 	sortKey: string,
 	prefix: string,
-	fromLang: Language,
-	toLang: Language
+	lang: Language
 ): Promise<Suggestion[]> {
 	try {
 		const suggestions: Suggestion[] = [];
@@ -70,11 +70,12 @@ async function getSuggestionsFromIndex(
 		const prefix3 = prefix.substring(0, 3).toLowerCase();
 		const prefixLower = prefix.toLowerCase();
 
+		// Always search both English and user's selected language
 		const command = new QueryCommand({
 			TableName: WORDBOOK_TABLE_NAME,
 			IndexName: indexName,
 			KeyConditionExpression: `#pk = :prefix3 AND begins_with(#sk, :fullPrefix)`,
-			FilterExpression: '#lang = :fromLang OR #lang = :toLang',
+			FilterExpression: '#lang = :en OR #lang = :userLang',
 			ExpressionAttributeNames: {
 				'#pk': partitionKey,
 				'#sk': sortKey,
@@ -83,8 +84,8 @@ async function getSuggestionsFromIndex(
 			ExpressionAttributeValues: {
 				':prefix3': prefix3,
 				':fullPrefix': prefixLower,
-				':fromLang': fromLang,
-				':toLang': toLang
+				':en': 'en',
+				':userLang': lang
 			}
 		});
 
@@ -105,13 +106,10 @@ async function getSuggestionsFromIndex(
 
 /**
  * Get all suggestions by querying both indexes and deduplicating
+ * Searches both English and user's selected language
  * Ports logic from Python words.py:get_suggestions
  */
-async function getSuggestions(
-	prefix: string,
-	fromLang: Language,
-	toLang: Language
-): Promise<Suggestion[]> {
+async function getSuggestions(prefix: string, lang: Language): Promise<Suggestion[]> {
 	// Use a Map for deduplication with composite key: word_lang
 	const suggestionsMap = new Map<string, Suggestion>();
 
@@ -122,8 +120,7 @@ async function getSuggestions(
 			'prefixAscii',
 			'ascii',
 			prefix,
-			fromLang,
-			toLang
+			lang
 		);
 
 		for (const item of asciiSuggestions) {
@@ -141,8 +138,7 @@ async function getSuggestions(
 		'prefix',
 		'word',
 		prefix,
-		fromLang,
-		toLang
+		lang
 	);
 
 	for (const item of standardSuggestions) {
@@ -157,6 +153,7 @@ async function getSuggestions(
 /**
  * POST /api/suggest
  * Get word suggestions for autocomplete
+ * Returns suggestions in both English and user's selected language
  */
 export const POST: RequestHandler = async ({ request }) => {
 	try {
@@ -167,14 +164,10 @@ export const POST: RequestHandler = async ({ request }) => {
 			return json({ statusCode: 400, message: 'Invalid input.' }, { status: 400 });
 		}
 
-		const { prefix, from_lang, to_lang } = data;
+		const { prefix, lang } = data;
 
-		// Get suggestions from both indexes
-		const suggestions = await getSuggestions(
-			prefix,
-			from_lang as Language,
-			to_lang as Language
-		);
+		// Get suggestions from both indexes (English + user's language)
+		const suggestions = await getSuggestions(prefix, lang as Language);
 
 		return json(suggestions as SuggestResponse);
 	} catch (error) {

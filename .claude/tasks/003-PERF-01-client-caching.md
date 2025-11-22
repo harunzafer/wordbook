@@ -1,6 +1,7 @@
 # Implement Client-Side Caching
 
 **Status:** Not Started
+**Story:** 003-PERF
 
 ## Overview
 Add caching for API responses to reduce redundant requests.

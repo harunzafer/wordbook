@@ -1,8 +1,7 @@
 # Generate Database Update Script
 
 **Status:** Not Started
-**Estimated Time:** 45 minutes
-**Parent Task:** 035-add-word-frequency-data
+**Story:** 012-FREQUENCY
 
 ## Overview
 Create and run a script to batch update all word entries in DynamoDB with frequency data.

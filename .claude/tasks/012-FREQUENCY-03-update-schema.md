@@ -1,8 +1,7 @@
 # Update DynamoDB Schema
 
 **Status:** Not Started
-**Estimated Time:** 30 minutes
-**Parent Task:** 035-add-word-frequency-data
+**Story:** 012-FREQUENCY
 
 ## Overview
 Add a `frequency` field to the DynamoDB word schema and update TypeScript types.

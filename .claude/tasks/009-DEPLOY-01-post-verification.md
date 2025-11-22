@@ -1,6 +1,7 @@
 # Post-Deployment Verification and Monitoring
 
 **Status:** Not Started
+**Story:** 009-DEPLOY
 
 ## Overview
 Verify production deployment works correctly and set up monitoring.

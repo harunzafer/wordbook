@@ -1,6 +1,7 @@
 # Setup Testing Framework (Optional)
 
 **Status:** Not Started
+**Story:** 007-DEVOPS
 
 ## Overview
 Set up basic testing (unit tests for utilities, maybe e2e).

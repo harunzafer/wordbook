@@ -1,6 +1,7 @@
 # Decommission Old AWS Lambda Infrastructure
 
 **Status:** Not Started
+**Story:** 010-CLEANUP
 
 ## Overview
 Clean up old AWS Lambda functions and related resources after successful migration to SvelteKit.

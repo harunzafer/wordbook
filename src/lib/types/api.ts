@@ -17,11 +17,11 @@ export type LookupResponse = Word;
 
 /**
  * Request body for word suggestion API
+ * Suggestions are always bidirectional between English and the user's language
  */
 export interface SuggestRequest {
 	prefix: string;
-	from_lang: Language;
-	to_lang: Language;
+	lang: Language; // User's selected language (English is implicit)
 }
 
 /**

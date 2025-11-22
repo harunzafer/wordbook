@@ -1,6 +1,7 @@
 # Responsive Design Review and Fixes
 
 **Status:** Not Started
+**Story:** 005-RESPONSIVE
 
 ## Overview
 Test and fix responsive behavior across mobile, tablet, desktop.

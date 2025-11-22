@@ -1,6 +1,7 @@
 # Add Loading States and Skeletons
 
 **Status:** Not Started
+**Story:** 002-UX
 
 ## Overview
 Add loading indicators and skeleton screens for better UX.

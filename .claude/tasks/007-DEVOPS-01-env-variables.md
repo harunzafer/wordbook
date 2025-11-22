@@ -1,6 +1,7 @@
 # Setup Environment Variables for Production
 
 **Status:** Not Started
+**Story:** 007-DEVOPS
 
 ## Overview
 Configure environment variables for Vercel deployment.

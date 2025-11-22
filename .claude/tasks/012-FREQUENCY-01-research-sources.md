@@ -1,8 +1,7 @@
 # Research and Select Frequency Data Source
 
 **Status:** Not Started
-**Estimated Time:** 30 minutes
-**Parent Task:** 035-add-word-frequency-data
+**Story:** 012-FREQUENCY
 
 ## Overview
 Research available word frequency data sources and select the most appropriate one for Wordbook.

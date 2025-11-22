@@ -15,5 +15,14 @@
 	"feature_languages_description": "Tłumaczenia w języku angielskim, francuskim, niemieckim, włoskim, polskim, portugalskim, hiszpańskim i tureckim.",
 	"nav_home": "Strona główna",
 	"nav_about": "O nas",
-	"nav_contact": "Kontakt"
+	"nav_contact": "Kontakt",
+	"word_lookup_title": "Wyszukiwanie słów",
+	"error_go_back": "Wróć",
+	"error_go_home": "Strona główna",
+	"footer_privacy": "Polityka prywatności",
+	"footer_terms": "Warunki korzystania",
+	"aria_toggle_theme": "Zmień motyw",
+	"aria_change_language": "Zmień język strony",
+	"aria_special_keyboard": "Klawiatura znaków specjalnych",
+	"aria_close_tooltip": "Zamknij podpowiedź"
 }

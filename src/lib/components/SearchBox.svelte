@@ -85,7 +85,7 @@
 					type="button"
 					class="btn btn-ghost btn-xs btn-circle"
 					onclick={hideTooltip}
-					aria-label="Close tooltip"
+					aria-label={m.aria_close_tooltip()}
 				>
 					✕
 				</button>

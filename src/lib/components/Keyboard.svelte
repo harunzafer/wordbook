@@ -1,6 +1,7 @@
 <script lang="ts">
 	import KeyboardIcon from 'lucide-svelte/icons/keyboard';
 	import type { Language } from '$lib/types/language';
+	import * as m from '$lib/paraglide/messages.js';
 
 	interface Props {
 		lang: Language;
@@ -91,7 +92,7 @@
 			type="button"
 			class="btn btn-sm btn-ghost btn-square"
 			onclick={toggleKeyboard}
-			aria-label="Special characters keyboard"
+			aria-label={m.aria_special_keyboard()}
 		>
 			<KeyboardIcon size={18} />
 		</button>

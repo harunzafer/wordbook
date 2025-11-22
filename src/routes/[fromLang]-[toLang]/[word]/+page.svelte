@@ -16,7 +16,7 @@
 	<!-- Search Section -->
 	<div class="mb-8">
 		<h1 class="text-3xl font-bold mb-4">{m.word_lookup_title()}</h1>
-		<SearchBox placeholder={m.search_placeholder()} />
+		<SearchBox />
 	</div>
 
 	<!-- Translation Results -->

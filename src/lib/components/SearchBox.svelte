@@ -12,7 +12,7 @@
 		showTooltip?: boolean;
 	}
 
-	let { placeholder = 'Search for a word...', showTooltip = false }: Props = $props();
+	let { placeholder = m.search_placeholder(), showTooltip = false }: Props = $props();
 
 	let tooltipVisible = $state(false);
 

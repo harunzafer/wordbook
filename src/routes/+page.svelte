@@ -19,10 +19,7 @@
 				{m.home_description()}
 			</p>
 
-			<SearchBox
-				placeholder={m.search_placeholder()}
-				showTooltip={true}
-			/>
+			<SearchBox showTooltip={true} />
 		</div>
 	</div>
 </div>

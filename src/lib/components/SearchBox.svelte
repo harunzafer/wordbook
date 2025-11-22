@@ -8,12 +8,11 @@
 	import * as m from '$lib/paraglide/messages.js';
 
 	interface Props {
-		fromLang?: string;
 		placeholder?: string;
 		showTooltip?: boolean;
 	}
 
-	let { fromLang = 'en', placeholder = 'Search for a word...', showTooltip = false }: Props = $props();
+	let { placeholder = m.search_placeholder(), showTooltip = false }: Props = $props();
 
 	let tooltipVisible = $state(false);
 
@@ -58,8 +57,7 @@
 <div class="w-full relative">
 	<AutoComplete
 		{placeholder}
-		{fromLang}
-		toLang={effectiveLang}
+		lang={effectiveLang}
 		onsubmit={handleSearch}
 		disabled={preferences.language === NO_LANGUAGE_SELECTED}
 	>

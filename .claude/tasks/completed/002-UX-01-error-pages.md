@@ -1,6 +1,7 @@
 # Implement Error Pages (404, 500)
 
-**Status:** Not Started
+**Status:** Completed
+**Story:** 002-UX
 
 ## Overview
 Create custom error pages for 404 and 500 errors.
@@ -11,11 +12,11 @@ Create custom error pages for 404 and 500 errors.
 - Add helpful messages and navigation
 
 ## Acceptance Criteria
-- [ ] 404 page with helpful message
-- [ ] 500 page for server errors
-- [ ] Both styled with DaisyUI
-- [ ] Include link back to home
-- [ ] Translated error messages
+- [x] 404 page with helpful message
+- [x] 500 page for server errors
+- [x] Both styled with DaisyUI
+- [x] Include link back to home
+- [x] Translated error messages
 
 ## Technical Notes
 - Use SvelteKit error page conventions

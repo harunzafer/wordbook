@@ -1,8 +1,7 @@
 # Update Suggest API to Sort by Frequency
 
 **Status:** Not Started
-**Estimated Time:** 30 minutes
-**Parent Task:** 035-add-word-frequency-data
+**Story:** 012-FREQUENCY
 
 ## Overview
 Modify the suggest API to return results sorted by word frequency (most common first).

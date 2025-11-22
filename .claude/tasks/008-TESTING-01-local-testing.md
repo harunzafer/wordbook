@@ -1,6 +1,7 @@
 # Complete Local Development Testing
 
 **Status:** Not Started
+**Story:** 008-TESTING
 
 ## Overview
 Comprehensive testing of the entire app locally before deployment.

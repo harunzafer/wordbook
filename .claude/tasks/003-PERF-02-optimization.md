@@ -1,6 +1,7 @@
 # Performance Optimization Pass
 
 **Status:** Not Started
+**Story:** 003-PERF
 
 ## Overview
 Optimize app performance (bundle size, loading speed, etc.).

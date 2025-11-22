@@ -5,8 +5,7 @@
 
 	interface Props {
 		placeholder?: string;
-		fromLang?: string;
-		toLang?: string;
+		lang?: string;
 		onsubmit?: (word: string, lang: string) => void;
 		languageSelector?: any;
 		disabled?: boolean;
@@ -14,8 +13,7 @@
 
 	let {
 		placeholder = 'Search...',
-		fromLang = 'en',
-		toLang = 'fr',
+		lang = 'fr',
 		onsubmit,
 		languageSelector,
 		disabled = false
@@ -40,13 +38,13 @@
 
 		isLoading = true;
 		try {
+			// Search both English and user's selected language
 			const response = await fetch('/api/suggest', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({
 					prefix: inputValue.toLowerCase(),
-					from_lang: fromLang,
-					to_lang: toLang
+					lang
 				})
 			});
 
@@ -100,9 +98,9 @@
 		submitValue(suggestion.word, suggestion.lang);
 	}
 
-	function submitValue(word?: string, lang?: string) {
+	function submitValue(word?: string, wordLang?: string) {
 		const submittedWord = word || inputValue;
-		const submittedLang = lang || fromLang; // Default to fromLang if not provided
+		const submittedLang = wordLang || 'en'; // Default to English if language unknown
 		if (submittedWord && onsubmit) {
 			onsubmit(submittedWord.toLowerCase(), submittedLang);
 		}
@@ -168,11 +166,8 @@
 					{@render languageSelector()}
 				{/if}
 
-				<!-- Show keyboard for fromLang if it's not English, otherwise show for toLang -->
-				<Keyboard
-					lang={(fromLang !== 'en' ? fromLang : toLang) as Language}
-					oncharacterclick={handleCharacterClick}
-				/>
+				<!-- Show keyboard for user's selected language (for special characters) -->
+				<Keyboard lang={lang as Language} oncharacterclick={handleCharacterClick} />
 			</label>
 
 			<button type="submit" class="btn rounded-l-none btn-primary" {disabled}>{m.translate_button()}</button>

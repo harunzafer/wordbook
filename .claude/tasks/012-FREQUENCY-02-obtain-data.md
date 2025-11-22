@@ -1,8 +1,7 @@
 # Obtain and Parse Frequency Data
 
 **Status:** Not Started
-**Estimated Time:** 30 minutes
-**Parent Task:** 035-add-word-frequency-data
+**Story:** 012-FREQUENCY
 
 ## Overview
 Download the selected frequency data source and parse it into a usable format.

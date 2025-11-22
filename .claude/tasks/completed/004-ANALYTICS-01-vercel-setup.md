@@ -1,6 +1,7 @@
 # Setup Analytics (Vercel Analytics)
 
-**Status:** Not Started
+**Status:** Completed
+**Story:** 004-ANALYTICS
 
 ## Overview
 Add Vercel Analytics for usage tracking.
@@ -11,10 +12,10 @@ Add Vercel Analytics for usage tracking.
 - Test events are firing
 
 ## Acceptance Criteria
-- [ ] @vercel/analytics installed
-- [ ] Analytics initialized in root layout
-- [ ] Page views tracked
-- [ ] Verified in Vercel dashboard (after deploy)
+- [x] @vercel/analytics installed
+- [x] Analytics initialized in root layout
+- [x] Page views tracked
+- [x] Verified in Vercel dashboard (after deploy)
 
 ## Technical Notes
 - Simple setup with Vercel Analytics
